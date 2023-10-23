@@ -1,0 +1,158 @@
+.add-phrase {
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    padding: 15px 20px;
+    margin: 7px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+form input[type='text']::placeholder {
+    transition: 0.4s;
+}
+
+input[type='submit'] {
+    cursor: pointer;
+    background-color: black;
+    transition: 0.5s;
+}
+
+form input[type='text']:hover::placeholder {
+    color: #ff8205;
+}
+
+form input[type='submit']:hover {
+    background-color: #ff8205;
+}
+
+form h1 {
+    color: green;
+}
+
+.add-phrase button {
+    padding: 10px 20px;
+    color: #ff8205;
+    font-size: 16px;
+    text-decoration: none;
+    transform: translateX(0%);
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.add-phrase button:hover {
+    background: #ff8205;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ff8205,
+        0 0 25px #ff8205,
+        0 0 50px #ff8205,
+        0 0 100px #ff8205;
+}
+
+.add-phrase button span {
+    position: absolute;
+    display: block;
+}
+
+.add-phrase button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff8205);
+    animation: btn-anim1 2s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.add-phrase button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ff8205);
+    animation: btn-anim2 2s linear infinite;
+    animation-delay: .5s;
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.add-phrase button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #ff8205);
+    animation: btn-anim3 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.add-phrase button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #ff8205);
+    animation: btn-anim4 2s linear infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+
+/* ---------------------- CSS media queries ------------------- */
+

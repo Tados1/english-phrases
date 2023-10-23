@@ -1,0 +1,78 @@
+.all-phrases-container {
+    padding: 20px;
+}
+
+.all-phrases {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+.all-phrases-container form {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.one-phrase {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px;
+    flex-wrap: wrap;
+    background-color: #222831;
+}
+
+.one-phrase p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: white;
+    margin: 10px 5px;
+}
+
+.one-phrase-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 75%;
+}
+
+
+
+.one-phrase button {
+    font-weight: bold;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.one-phrase button:hover {
+    background-color: #ff8205;
+}
+
+/* ---------------------- CSS media queries ------------------- */
+
+@media only screen and (max-width: 1500px) {
+    .all-phrases {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .all-phrases {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .all-phrases {
+        display: block;
+    }
+}

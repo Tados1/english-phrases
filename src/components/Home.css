@@ -1,0 +1,229 @@
+.content {
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.start-button {
+    font-family: "Arial Black", Impact;
+    font-size: 80px;
+    color: #fff;
+    border: none;
+    border-bottom: 5px solid #ff9831;
+    padding-bottom: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.5s, border-bottom 0.5s;
+    margin-top: -150px;
+}
+
+.start-button:hover {
+    transform: scale(1.2);
+    border-bottom: 5px solid #c96400b7;
+}
+
+.guess-word {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -150px;
+}
+
+.guess-word form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.guess-word p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+.guess-word form input {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    padding: 15px 20px;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.guess-word form input[type="submit"] {
+    cursor: pointer;
+}
+
+.english-guess-word h1 { 
+    color: #ffffff;
+    text-align: center;
+}
+
+.right-answer h1 {
+    font-family: "Arial Black", Impact;
+    color: green;
+    text-align: center;
+}
+
+.wrong-answer h1{
+    font-family: "Arial Black", Impact;
+    color: red;
+    text-align: center;
+}
+
+
+.guess-word button {
+    padding: 10px 20px;
+    color: #ff8205;
+    font-size: 16px;
+    text-decoration: none;
+    transform: translateX(0%);
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.guess-word button:hover {
+    background: #ff8205;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ff8205,
+        0 0 25px #ff8205,
+        0 0 50px #ff8205,
+        0 0 100px #ff8205;
+}
+
+.guess-word button span {
+    position: absolute;
+    display: block;
+}
+
+.guess-word button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff8205);
+    animation: btn-anim1 2s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.guess-word button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ff8205);
+    animation: btn-anim2 2s linear infinite;
+    animation-delay: .5s;
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.guess-word button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #ff8205);
+    animation: btn-anim3 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.guess-word button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #ff8205);
+    animation: btn-anim4 2s linear infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+/* ---------------------- CSS media queries ------------------- */
+
+@media only screen and (max-width: 1100px) {
+    .start-button {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .guess-word p {
+        font-size: 40px;
+    }
+    
+    .guess-word form input {
+        font-size: 20px;
+    }
+    
+    .right-answer h1 {
+        font-size: 20px;
+    }
+
+    .wrong-answer {
+        margin-top: 50px;
+    }
+    
+    .wrong-answer h1, .wrong-answer p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .start-button {
+        font-size: 35px;
+    }
+}
