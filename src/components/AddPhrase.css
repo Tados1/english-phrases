@@ -156,3 +156,8 @@ form h1 {
 
 /* ---------------------- CSS media queries ------------------- */
 
+@media only screen and (max-width: 499px) {
+    .add-phrase {
+        height: 500px;
+    }
+}
