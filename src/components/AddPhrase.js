@@ -6,7 +6,6 @@ const AddPhrase = () => {
     const [slovakWord, setSlovakWord] = useState('')
     const [englishWord, setEnglishWord] = useState('')
     const [added, setAdded] = useState(false)
-    //const [error, setError] = useState(false)
 
     const submitForm = async (e) => {
         e.preventDefault()
